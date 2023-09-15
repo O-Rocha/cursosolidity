@@ -5,6 +5,7 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 */
 pragma solidity 0.8.19;
 
+// endereco do contrato 0x51f6544860D473c4c26D2b52bf40bFc13C33337F
 contract Aluguel {
     string public locatario;
     string public locador;
