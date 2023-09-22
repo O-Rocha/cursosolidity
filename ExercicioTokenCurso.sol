@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "https://github.com/jeffprestes/cursosolidity/blob/master/bradesco_token_aberto.sol";
-// Endereço do contrato: 0xb45D965b8a4DdB72D96de0098dD3936700DFC81a
+// Endereço do contrato: 0x61861Fb08B1eF48A0bEdd211ad9740Db13088449
 
 contract Custody {
 
@@ -11,10 +11,10 @@ contract Custody {
 
     ExercicioToken token;
 
-    constructor (string memory _nomeCliente) {
+    constructor (string memory _nomeCliente, address _tokenAddress) {
         nomeCliente = _nomeCliente;
         clientAccount = payable(msg.sender);
-        token = new ExercicioToken();
+        token = ExercicioToken(_tokenAddress);
     }
 
     function meuSaldo() view public returns(uint256) {
